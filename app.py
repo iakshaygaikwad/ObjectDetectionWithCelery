@@ -56,9 +56,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 result_folder = "./results"
 
 
-@app.route('/hello')
+@app.route('/ping')
 def hello_world():
-    return 'Hello World!'
+    return 'Hello!!!!'
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -163,4 +163,4 @@ def object_detect(image_path, video_json_file):
 
 
 if __name__ == '__main__':
-    app.run(DEBUG=True)
+    app.run(host='0.0.0.0', port=5000, debug=False)
